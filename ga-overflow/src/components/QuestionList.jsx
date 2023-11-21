@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -23,9 +23,9 @@ const QuestionList = () => {
 
 
     return (
-        <div>
+        <div className='question-container'>
 
-            <h1>Questions</h1>
+            <h1 className='question-header'>Questions</h1>
 
 
             {questions.map((question, key) => {
@@ -39,7 +39,6 @@ const QuestionList = () => {
                     </div>
                 );
             }
-
             )}
 
         </div >

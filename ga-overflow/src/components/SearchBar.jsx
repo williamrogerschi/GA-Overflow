@@ -30,25 +30,9 @@ return (
 <div className='search-bar'>
   <input className='search-input'
     type="search"
-    placeholder="Search here"
+    placeholder="Search.."
     onChange={handleChange}
     value={searchInput} />
-   
-{/* 
-<table>
-    <th>Country</th>
-    <th>Continent</th>
-
-{groups.map((group, index) => {
-
-<div>
-  <tr>
-    <td>{group.name}</td>
-  </tr>
-</div>
-
-})}
-</table> */}
 </div>
 )}
 
