@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import questionList from '../data/questions/batmanQuestions';
+import questionList from '../data/questions/supermanQuestions';
 
 
 
@@ -14,10 +14,6 @@ const QuestionListResume = () => {
         console.log("state", questions);
     }, []);
 
-    const showQuestion = (questionId) => {
-        Navigate(`/questions/${questionId}`);
-    };
-
 
     return (
         <div className='question-container'>
@@ -28,15 +24,20 @@ const QuestionListResume = () => {
                 return (
                     <div key={question.id} className="question-list-item">
 
-                        <Link className='question-content' to={`/question/${question.id}`}>
+                        <Link className='question-content' to={`/resume-questions/${question.id}`}>
                             <h4 className='q-title'>{question.title}</h4>
                             <div className='question-body'>
                                 <p className='question-description'>{question.description}</p>
                                 <div className='code-snippet'>{question.codeSnippet}</div>
                             </div>
                         </Link>
+                        <div>
+
+                          
+                        </div>
 
                     </div>
+
                 );
             }
             )}
