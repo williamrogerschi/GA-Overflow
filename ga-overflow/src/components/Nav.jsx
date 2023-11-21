@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-
+import SearchBar from "./searchBar"
 
 const Nav = () => {
 
@@ -9,12 +9,11 @@ const Nav = () => {
 
 return (
     <div className="navbar">
-        
-      {/* <Link className="nav-a" to='/'>
-      <img height='100px' width='100px' src='mern_logo_black.png' alt='pizza-logo'/>
-      </Link>
-      <Link className="nav-a" to="/Pizza"> Pizzas </Link>
-      <Link className="nav-a" to="/CYOP"> CYOP </Link> */}
+
+      <Link className="nav-a" to='/'>GA Overflow </Link>
+      <SearchBar/>
+      <Link className="nav-a" to="/"> Settings </Link>
+      <Link className="nav-a" to="/"> Groups </Link>
     </div>
   )
 }
