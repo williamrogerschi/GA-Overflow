@@ -1,8 +1,4 @@
 import { Link } from 'react-router-dom';
-import Header from './Header';
-import Nav from './Nav';
-import Home from './Home';
-import Footer from './Footer';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -22,23 +18,24 @@ const Main = () => {
 
 
     return (
-        <div>
+        <div className='question-container'>
 
-            <h1>Questions</h1>
+            <h1 className='question-header'>Questions</h1>
 
 
             {questions.map((question,) => {
                 return (
                     <div className="question-list-item">
-                        <Link key={question.id} to={`/question/${question.id}`}>
-                            <h4>{question.title}</h4>
-                            <p>{question.description}</p>
+                        <Link className='question-content' key={question.id} to={`/question/${question.id}`}>
+                            <h4 className='q-title'>{question.title}</h4>
+                            <div className='question-body'>
+                            <p className='question-description'>{question.description}</p>
                             <div className='code-snippet'>{question.codeSnippet}</div>
+                            </div>
                         </Link>
                     </div>
                 );
             }
-
             )}
 
         </div>
