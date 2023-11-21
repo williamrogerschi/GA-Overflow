@@ -1,19 +1,16 @@
-
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
-import dataList from '../data/questions/batmanQuestions';
+import questionList from '../data/questions/batmanQuestions';
 
 
 
 const QuestionList = () => {
-    const [questionList, setQuestionList] = useState(dataList);
+    const [questions, setQuestions] = useState(questionList);
 
 
     useEffect(() => {
         console.log(questionList);
-        setQuestionList(dataList);
         console.log("state", questions);
     }, []);
 
@@ -24,18 +21,21 @@ const QuestionList = () => {
 
     return (
         <div className='question-container'>
-
             <h1 className='question-header'>Questions</h1>
 
+            {questions.map((question) => {
 
-            {questions.map((question, key) => {
                 return (
-                    <div className="question-list-item">
-                        <Link key={question.id} to={`/javaScripQuestion/${question.id}`}>
-                            <h4>{question.title}</h4>
-                            <p>{question.description}</p>
-                            <div className='code-snippet'>{question.codeSnippet}</div>
+                    <div key={question.id} className="question-list-item">
+
+                        <Link className='question-content'  to={`/question/${question.id}`}>
+                            <h4 className='q-title'>{question.title}</h4>
+                            <div className='question-body'>
+                                <p className='question-description'>{question.description}</p>
+                                <div className='code-snippet'>{question.codeSnippet}</div>
+                            </div>
                         </Link>
+
                     </div>
                 );
             }
@@ -51,5 +51,23 @@ const QuestionList = () => {
 
 
 export default QuestionList
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
