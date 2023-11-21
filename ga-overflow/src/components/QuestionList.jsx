@@ -3,19 +3,23 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import questionList from '../data/questions/batmanQuestions';
+import dataList from '../data/questions/batmanQuestions';
 
 
 
-const Main = () => {
-    const [questions, setQuestions] = useState(questionList);
+const QuestionList = () => {
+    const [questionList, setQuestionList] = useState(dataList);
 
 
     useEffect(() => {
         console.log(questionList);
-        setQuestions(questionList);
+        setQuestionList(dataList);
         console.log("state", questions);
     }, []);
+
+    const showQuestion = (questionId) => {
+        Navigate(`/questions/${questionId}`);
+    };
 
 
     return (
@@ -24,7 +28,7 @@ const Main = () => {
             <h1>Questions</h1>
 
 
-            {questions.map((question,) => {
+            {questions.map((question, key) => {
                 return (
                     <div className="question-list-item">
                         <Link key={question.id} to={`/javaScripQuestion/${question.id}`}>
@@ -38,7 +42,7 @@ const Main = () => {
 
             )}
 
-        </div>
+        </div >
     );
 
 };
@@ -47,6 +51,6 @@ const Main = () => {
 
 
 
-export default Main
+export default QuestionList
 
 
