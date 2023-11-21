@@ -2,8 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import Nav from './Nav';
 import Home from './Home';
 import QuestionList from './QuestionList';
-import HTMLQuestions from './QuestionListHTML';
-import ResumeQuestions from './QuestionListResume';
+import QuestionListHTML from './QuestionListHTML';
+import QuestionListResume from './QuestionListResume';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -25,8 +25,8 @@ const Main = () => {
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/js-questions' element={<QuestionList />} />
-                    <Route path='/html-questions' element={<HTMLQuestions />} />
-                    <Route path='/resume-questions' element={<ResumeQuestions />} />
+                    <Route path='/html-questions' element={<QuestionListHTML />} />
+                    <Route path='/resume-questions' element={<QuestionListResume />} />
                 </Routes>
             </div>
         </>
