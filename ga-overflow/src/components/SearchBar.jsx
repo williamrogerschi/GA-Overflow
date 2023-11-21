@@ -27,13 +27,12 @@ if (searchInput.length > 0) {
 
 return (
 
-<div>
-
-<input
-   type="search"
-   placeholder="Search here"
-   onChange={handleChange}
-   value={searchInput} />
+<div className='search-bar'>
+  <input className='search-input'
+    type="search"
+    placeholder="Search here"
+    onChange={handleChange}
+    value={searchInput} />
    
 {/* 
 <table>
@@ -51,8 +50,6 @@ return (
 })}
 </table> */}
 </div>
-
-)
-}
+)}
 
 export default SearchBar
