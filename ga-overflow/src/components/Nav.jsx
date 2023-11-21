@@ -11,17 +11,17 @@ return (
   <>
     <div className="navbar">
       <Link className="nav-a" to='/'>
-        <img height='40px' width='40px' src="ga.png"/>
+        <img height='40px' width='40px' src="../../public/ga.png"/>
       </Link>
       <SearchBar/>
       <Link className="nav-a" to="/">
-        <img height='40px' width='40px' src="setting.png"/>
+        <img height='40px' width='40px' src="../../public/setting.png"/>
       </Link>
       <Link className="nav-a" to="/">
-        <img height='40px' width='40px' src='messenger.png'/>
+        <img height='40px' width='40px' src='../../public/messenger.png'/>
       </Link>
       <Link className="nav-a" to="/">
-        <img height='40px' width='40px' src='add-group.png'/>
+        <img height='40px' width='40px' src='../../public/add-group.png'/>
       </Link>
     </div>
   </>
