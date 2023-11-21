@@ -93,3 +93,48 @@ a {
   border-radius: 12px;
   font-family: 'roboto mono' , monospace;
 }
+.group-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.group-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+}
+.about-a {
+  border-radius: 8px;
+  background-color: rgb(204, 221, 216);
+  padding: 12px;
+  margin: 4px;
+}
+.about-a:hover {
+  border-radius: 8px;
+  background-color: rgb(204, 221, 216);
+  padding: 12px;
+  margin: 4px;
+  box-shadow: 1px 1px 10px grey;
+}
+.group-1{
+  background-color: rgb(255, 234, 206);
+  padding: 20px;
+  margin: 12px;
+  border-radius: 12px;
+}
+
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+.topic-btn {
+  font-weight: 700;
+}
+
+.topic-btn:hover{
+  font-weight: 700;
+  text-decoration: underline;
+}
