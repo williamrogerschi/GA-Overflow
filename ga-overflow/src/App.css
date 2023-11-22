@@ -28,14 +28,6 @@ font-family: 'Poppins', sans-serif;
   color: black;
   font-size: 18px;
 }
-.search-bar{
-  display: flex;
-  align-items: center;
-  text-align: center;
-  height: 40px;
-  border-radius: 8px;
-  border: 1px solid white;
-}
 .search-input{
   display: flex;
   align-items: center;
@@ -44,7 +36,7 @@ font-family: 'Poppins', sans-serif;
   width: 600px;
   padding: 0 80px 0 80px;
   border-radius: 8px;
-  border: 1px solid white;
+  border: 2px solid white;
 }
 a {
   text-decoration: none;
